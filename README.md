@@ -19,7 +19,7 @@ please type this command below:
 
 * UNIX (includes macOS and Linux):
   ```Bash
-  source .venv/Scripts/activate
+  source .venv/bin/activate
   ```
 * Windows (Command Prompt)
   ```DOS
