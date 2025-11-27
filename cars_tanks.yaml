@@ -1,0 +1,8 @@
+path: cars_tanks
+train: train
+val: val
+
+#Classes
+names:
+ 0: car
+ 1: tank
