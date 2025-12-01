@@ -215,3 +215,6 @@ archive/
 
 # Training file should not be commited
 *.pt
+
+# Image files
+data/images/
