@@ -37,6 +37,27 @@ will be installed with this command:
 pip install -r ./requirements.txt
 ```
 
+> [!CAUTION]
+> This approach will install **CPU ONLY** PyTorch for maximize compatability.
+> 
+> To enable CUDA (nVidia GPU supports in Windows and Linux) or ROCm (AMD GPU supports in Linux)
+> acceleration supports, PyTorch **must be** installed with specified index URL at first:
+> 
+> ```bash
+> # Uncomment below if using nVidia GPU
+> # TORCH_COMP_PLATFORM=cu130
+> 
+> # Uncomment below if using AMD GPU
+> # TORCH_COMP_PLATFORM=rocm6.4
+> 
+> pip install torch torchvision --index-url https://download.pytorch.org/whl/${TORCH_COMP_PLATFORM}
+> ```
+> 
+> Then install other fundamentals packages:
+> ```bash
+> pip install ultralytics notebook ipywidgets numpy pandas
+> ```
+
 If any new dependencies installed, which not appeared in `requirements.txt`,
 please update it as soon as possible by running this command:
 
@@ -65,27 +86,6 @@ Or using Powershell command (preferred):
 ```powershell
 pip freeze | Out-File -Encoding UTF8 .\requirements.txt 
 ```
-
-> [!CAUTION]
-> This approach will install **CPU ONLY** PyTorch for maximize compatability.
-> 
-> To enable CUDA (nVidia GPU supports in Windows and Linux) or ROCm (AMD GPU supports in Linux)
-> acceleration supports, PyTorch **must be** installed with specified index URL at first:
-> 
-> ```bash
-> # Uncomment below if using nVidia GPU
-> # TORCH_COMP_PLATFORM=cu130
-> 
-> # Uncomment below if using AMD GPU
-> # TORCH_COMP_PLATFORM=rocm6.4
-> 
-> pip install torch torchvision --index-url https://download.pytorch.org/whl/${TORCH_COMP_PLATFORM}
-> ```
-> 
-> Then install other fundamentals packages:
-> ```bash
-> pip install ultralytics notebook ipywidgets numpy pandas
-> ```
 
 ### Change directory for Ultralytics
 
