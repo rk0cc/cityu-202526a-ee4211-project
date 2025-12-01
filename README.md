@@ -96,7 +96,7 @@ multiple directories, please change them by either run these commands:
 ```Bash
 yolo settings datasets_dir="path/to/your/datasets"
 yolo settings weights_dir="path/to/your/weights"
-yolo settings run_dir="path/to/your/runs"
+yolo settings runs_dir="path/to/your/runs"
 ```
 
 or edit `~/.config/Ultralytics/settings.json` (`%APPDATA%\Ultralytics\settings.json` for Windows):
@@ -105,6 +105,6 @@ or edit `~/.config/Ultralytics/settings.json` (`%APPDATA%\Ultralytics\settings.j
 {
   "datasets_dir": "path/to/your/datasets",
   "weights_dir": "path/to/your/weights",
-  "run_dir": "path/to/your/runs"
+  "runs_dir": "path/to/your/runs"
 }
 ```
