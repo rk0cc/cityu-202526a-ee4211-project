@@ -1,5 +1,15 @@
 # Project assignment for EE4211 (2025-26 Semester A)
 
+## Prerequisites
+
+### Install and enable Git LFS
+
+> [!CAUTION]
+> Pull or clone **without Git LFS installed** will cause **files corruptions** if they stores in LFS.
+
+Go to [official Git LFS website](https://git-lfs.com/) to install and follow instructions for
+enabling LFS supports.
+
 ## Setup
 
 ### Create and activate virtual environment
