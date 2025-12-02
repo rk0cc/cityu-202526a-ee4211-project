@@ -65,7 +65,7 @@ pip install -r ./requirements.txt
 > 
 > Then install other fundamentals packages:
 > ```bash
-> pip install ultralytics notebook ipywidgets numpy pandas
+> pip install ultralytics notebook ipywidgets numpy pandas opencv-contrib-python
 > ```
 
 If any new dependencies installed, which not appeared in `requirements.txt`,
