@@ -1,5 +1,15 @@
 # Project assignment for EE4211 (2025-26 Semester A)
 
+## Prerequisites
+
+### Install and enable Git LFS
+
+> [!CAUTION]
+> Pull or clone **without Git LFS installed** will cause **files corruptions** if they stores in LFS.
+
+Go to [official Git LFS website](https://git-lfs.com/) to install and follow instructions for
+enabling LFS supports.
+
 ## Setup
 
 ### Create and activate virtual environment
@@ -36,6 +46,27 @@ will be installed with this command:
 ```Bash
 pip install -r ./requirements.txt
 ```
+
+> [!CAUTION]
+> This approach will install **CPU ONLY** PyTorch for maximize compatability.
+> 
+> To enable CUDA (nVidia GPU supports in Windows and Linux) or ROCm (AMD GPU supports in Linux)
+> acceleration supports, PyTorch **must be** installed with specified index URL at first:
+> 
+> ```bash
+> # Uncomment below if using nVidia GPU
+> # TORCH_COMP_PLATFORM=cu130
+> 
+> # Uncomment below if using AMD GPU
+> # TORCH_COMP_PLATFORM=rocm6.4
+> 
+> pip install torch torchvision --index-url https://download.pytorch.org/whl/${TORCH_COMP_PLATFORM}
+> ```
+> 
+> Then install other fundamentals packages:
+> ```bash
+> pip install ultralytics notebook ipywidgets numpy pandas opencv-contrib-python
+> ```
 
 If any new dependencies installed, which not appeared in `requirements.txt`,
 please update it as soon as possible by running this command:
@@ -75,7 +106,7 @@ multiple directories, please change them by either run these commands:
 ```Bash
 yolo settings datasets_dir="path/to/your/datasets"
 yolo settings weights_dir="path/to/your/weights"
-yolo settings run_dir="path/to/your/runs"
+yolo settings runs_dir="path/to/your/runs"
 ```
 
 or edit `~/.config/Ultralytics/settings.json` (`%APPDATA%\Ultralytics\settings.json` for Windows):
@@ -84,6 +115,6 @@ or edit `~/.config/Ultralytics/settings.json` (`%APPDATA%\Ultralytics\settings.j
 {
   "datasets_dir": "path/to/your/datasets",
   "weights_dir": "path/to/your/weights",
-  "run_dir": "path/to/your/runs"
+  "runs_dir": "path/to/your/runs"
 }
 ```

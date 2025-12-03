@@ -212,3 +212,6 @@ weights/
 datasets/
 
 archive/
+
+# Training file should not be commited
+*.pt
